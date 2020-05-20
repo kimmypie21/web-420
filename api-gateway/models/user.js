@@ -9,7 +9,7 @@
 */
 
 const header = require('../../pierce-header.js'); //import statement for header file
-console.log(header.display("Kimberly", "Pierce", "Assignment 2.3") + " \n ");
+console.log(header.display("Kimberly", "Pierce", "Assignment 4.3") + " \n ");
 
 //required modules
 var mongoose= require ("mongoose");
