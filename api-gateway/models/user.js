@@ -21,5 +21,14 @@ var userSchema = new mongoose.Schema({
     email: String
 });
 
+//add a new user to database
+module.exports.add = (user, callback)=> {
+    user.save(callback);
+};
+module.exports.getById = (id, callback) => {
+    var query = {_id: id};
+    User.findById(query, callback);
+};
+
 //export view model
 module.exports = mongoose.model("User", userSchema);
