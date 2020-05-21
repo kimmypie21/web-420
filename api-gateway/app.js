@@ -11,10 +11,23 @@ mongoose.Promise = require("bluebird");
 var apiCatalog = require("./routes/api-catalog");
 
 //connect to mongoose database
-mongoose.connect("mongodb://admin:admin@ds121588.mlab.com:21588/mean-library",{
+var mongoDB = "mongodb+srv://new_user:54n2T7UShxq@buwebdev-cluster-1-brhxo.mongodb.net/ems?authSource=admin&replicaSet=buwebdev-cluster-1-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true";
+mongoose.connect(mongoDB, {
+  useNewUrlParser: true, useUnifiedTopology: true,
+  promiseLibrary:require ("bluebird")
+});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on ("error", console.error.bind(console, "MongoDB connection error:"));
+db.once("open", function (){
+  console.log("Application connected to mLab MongoDB instance");
+});
+
+/*
+mongoose.connect("mongodb+srv://new_user:54n2T7UShxq@buwebdev-cluster-1-brhxo.mongodb.net/ems?authSource=admin&replicaSet=buwebdev-cluster-1-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true",{
   promiseLibrary:require ("bluebird")
 }).then (()=>console.log("connection successful")).catch((err)=>console.error(err));
-
+*/
 
 //SETS
 // view engine setup
