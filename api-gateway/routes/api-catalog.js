@@ -1,10 +1,10 @@
 /*
 ============================================
-; Title: Assignment 4.3
-; Author: Professor Krasso
-; Date: 19 May 2020
+; Title: API Gateway Project
+; Author: K. Pierce
+; Date: Spring 2020
 ; Modified By: Kimberly Pierce
-; Description: API Gateway Part III
+; Description: API Gateway Project
 ;===========================================
 */
 

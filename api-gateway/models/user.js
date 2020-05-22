@@ -1,21 +1,22 @@
 /*
 ============================================
-; Title: Assignment 4.3 
-; Author: Professor Krasso
-; Date: 19 May 2020
+; Title: API Gateway Project
+; Author: K. Pierce
+; Date: Spring 2020
 ; Modified By: Kimberly Pierce
-; Description: API Gateway Part III
+; Description: API Gateway Project
 ;===========================================
 */
 
 const header = require('../../pierce-header.js'); //import statement for header file
-console.log(header.display("Kimberly", "Pierce", "API Gateway") + " \n ");
+console.log(header.display("Kimberly", "Pierce", "Assignment API Gateway") + " \n ");
 
 //required modules
 var mongoose= require ("mongoose");
 
 //create user view model schema
-var userSchema = new mongoose.Schema({
+var Schema = mongoose.Schema;
+var userSchema = new Schema({
     username: String,
     password: String,
     email: String
@@ -27,8 +28,8 @@ module.exports.add = (user, callback)=> {
 };
 module.exports.getById = (id, callback) => {
     var query = {_id: id};
-    User.findById(query, callback);
+    user.findById(query, callback);
 };
 
 //export view model
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("user", userSchema);

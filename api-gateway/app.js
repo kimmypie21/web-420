@@ -1,3 +1,14 @@
+/*
+============================================
+; Title: API Gateway Project
+; Author: K. Pierce
+; Date: Spring 2020
+; Modified By: Kimberly Pierce
+; Description: API Gateway Project
+;===========================================
+*/
+
+
 //required modules
 var createError = require('http-errors');
 var express = require('express');
