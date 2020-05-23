@@ -22,7 +22,7 @@ mongoose.Promise = require("bluebird");
 var apiCatalog = require("./routes/api-catalog");
 
 //connect to mongoose database
-var mongoDB = "mongodb+srv://new_user:54n2T7UShxq@buwebdev-cluster-1-brhxo.mongodb.net/ems?authSource=admin&replicaSet=buwebdev-cluster-1-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true";
+var mongoDB = "mongodb+srv://new_user:54n2T7UShxq@buwebdev-cluster-1-brhxo.mongodb.net/api-gateway?authSource=admin&replicaSet=buwebdev-cluster-1-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true";
 mongoose.connect(mongoDB, {
   useNewUrlParser: true, useUnifiedTopology: true,
   promiseLibrary:require ("bluebird")
