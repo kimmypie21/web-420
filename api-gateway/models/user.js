@@ -34,5 +34,10 @@ module.exports.getById = (id, callback) => {
     User.findById(query, callback);
 };
 
+//query individual user by email address
+module.exports.getOne = (e, callback) => {
+    var query = {email: e};
+    User.findOne (query, callback);
+};
 
 //module.exports = (mongoose.model("user", userSchema));
